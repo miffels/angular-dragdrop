@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Angular Drag&Drop Sample</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="app/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="app/lib/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="app/lib/angularjs/angular.js"></script>
+    <script type="text/javascript" src="angular-dragdrop.js"></script>
+    <script type="text/javascript" src="app/js/app.js"></script>
+    <script type="text/javascript" src="app/js/controllers.js"></script>
+    <style type="text/css">
+        .box {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .hover {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body ng-app="dragdropSample">
+<div ng-controller="DragCtrl" id="draggables">
+    <h1>Drag items from here</h1>
+    <div id="drag-cat" class="box cat" angular-draggable helper="clone" revert="invalid" draggable-data="cat">I am a cat</div>
+    <div id="drag-dog" class="box dog" angular-draggable helper="clone" revert="invalid" draggable-data="dog">I am a dog</div>
+    <div id="drag-catdog" class="box cat dog" angular-draggable helper="clone" revert="invalid" draggable-data="catdog">I am a catdog - both, a cat and a dog</div>
+</div>
+<div ng-controller="DropCtrl" id="droppables">
+    <h1>Drop them here</h1>
+    <div id="drop-cat" class="box" angular-droppable accept=".cat" hover-class="hover" on-drop="cat">I accept cats</div>
+    <div id="drop-dog" class="box" angular-droppable accept=".dog" hover-class="hover" on-drop="dog">I accept dogs</div>
+    <div id="drop-cat-dog" class="box" angular-droppable accept=".cat,.dog" hover-class="hover" on-drop="{&quot;.cat&quot;: &quot;cat&quot;, &quot;.dog&quot;: &quot;dog&quot;}">I accept both, cats and dogs</div>
+    <div id="drop-catdog" class="box" angular-droppable accept=".cat.dog" hover-class="hover" on-drop="catdogHandler">I accept catdogs only</div>
+    <h1>See what handler has been called here</h1>
+    <input id="cat-value" type="text" ng-model="cat" placeholder="model 'cat'"/>
+    <input id="dog-value" type="text" ng-model="dog" placeholder="model 'dog'"/>
+    <br>
+    Check the log if you drop catdog on the fourth box - it will print $scope and the catdog object.
+</div>
+</body>
+</html>
