@@ -1,6 +1,6 @@
 {
   "name": "angular.dragdrop",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "AngularJS wrapper directives for jQuery-ui draggable and droppable widgets",
   "keywords": [
     "AngularJS",
