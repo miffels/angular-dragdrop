@@ -21,7 +21,12 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "app",
+    "config",
+    "scripts",
+    "index.html",
+    "server.cmd"
   ],
   "dependencies": {
     "jquery": "~2.0.3",
