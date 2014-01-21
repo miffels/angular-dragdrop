@@ -1,0 +1,31 @@
+{
+  "name": "angular-dragdrop",
+  "main": "angular-dragdrop.js",
+  "version": "0.0.1",
+  "authors": [
+    "Michael Jess <michael.jess@gmx.de>"
+  ],
+  "description": "Wrapper directives for the jQuery-UI draggable & droppable widgets",
+  "keywords": [
+    "AngularJS",
+    "Drag",
+    "Drop",
+    "Draggable",
+    "Droppable",
+    "JQuery-UI"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "jquery-ui": "~1.10.3",
+    "angular": "~1.2.9"
+  }
+}
