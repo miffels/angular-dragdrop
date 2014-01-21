@@ -1,12 +1,13 @@
 module.exports = function(config) {
     config.set({
+        frameworks: ['jasmine'],
+
         files: [
-            JASMINE,
-            JASMINE_ADAPTER,
-            'app/lib/jquery/dist/jquery.js',
-            'app/lib/**/*.js',
-            'test/helpers.js',
+            'app/lib/jquery/jquery.js',
+            'app/lib/jquery-ui/ui/jquery-ui.js',
+            'app/lib/angular/angular.js',
             'angular-dragdrop.js',
+            'test/helpers.js',
             'test/unit/**/*.js',
             'test/lib/**/*.js'
         ],
@@ -21,15 +22,16 @@ module.exports = function(config) {
 
         urlRoot: '__karma__',
 
-        browsers: ['Chrome'],
+        browsers: ['C:/Program Files (x86)/Google/Chrome/Application/chrome.exe'],
 
         reporters: ['dots'],
 
-        LogLevel: LOG_DEBUG,
+        LogLevel: config.LOG_DEBUG,
 
         plugins: [
-            'karma-ng-scenario',
-            'karma-chrome-launcher'
+            'karma-chrome-launcher',
+            'karma-jasmine',
+            'karma-script-launcher'
         ]
     });
 };

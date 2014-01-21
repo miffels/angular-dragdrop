@@ -23,7 +23,8 @@ module.exports = function(config) {
 
         plugins: [
             'karma-ng-scenario',
-            'karma-chrome-launcher'
+            'karma-chrome-launcher',
+            'karma-jasmine'
         ]
     });
 };
